@@ -1,0 +1,5 @@
+Model, Image Size, FPS, Latency(ms), Model size(mb), RAM, Cameras, Show
+yolov8n-pose.pt,640x480,6.15,132.78,6.52,6322.21,6,True
+yolov8n-pose.pt,640x480,7.78,137.04,6.52,6322.43,6,False
+yolov8n-pose.pt,640x480,6.15,413.01,6.52,6333.80,6,False
+yolov8n-pose.pt,640x480,9.97,179.45,6.52,4199.61,6,True

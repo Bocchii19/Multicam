@@ -1,0 +1,42 @@
+"rtsp://admin:DVCLRQ@192.168.0.123:554/ch1/main",
+"rtsp://admin:HLTHKD@192.168.0.122:554/ch1/main",
+"rtsp://admin:XLRPZQ@192.168.0.121:554/ch1/main",
+"rtsp://admin:TIJEQB@192.168.0.117:554/ch1/main",
+"rtsp://admin:JRGMMV@192.168.0.120:554/ch1/main",
+"rtsp://admin:WNRDVL@192.168.0.118:554/ch1/main",
+
+"rtsp://admin:CYXJBA@192.168.0.109:554/ch1/main",
+"rtsp://admin:CPSFLT@192.168.0.104:554/ch1/main",
+"rtsp://admin:NNFVAJ@192.168.0.114:554/ch1/main",
+"rtsp://admin:WSLRQC@192.168.0.113:554/ch1/main",
+"rtsp://admin:NXKPHU@192.168.0.115:554/ch1/main",
+"rtsp://admin:NWKGIC@192.168.0.124:554/ch1/main",
+
+"rtsp://admin:EIUSAY@192.168.0.105:554/ch1/main",
+"rtsp://admin:YDVFNP@192.168.0.108:554/ch1/main",
+"rtsp://admin:PBPBND@192.168.0.119:554/ch1/main",
+"rtsp://admin:IFPREC@192.168.0.101:554/ch1/main",
+"rtsp://admin:KAETPH@192.168.0.110:554/ch1/main",
+"rtsp://admin:DTAJVP@192.168.0.102:554/ch1/main",
+
+"rtsp://admin:BWKUYM@192.168.0.116:554/ch1/main",
+"rtsp://admin:PSQSFP@192.168.0.107:554/ch1/main",
+"rtsp://admin:WXEXRW@192.168.0.111:554/ch1/main",
+"rtsp://admin:KXILGD@192.168.0.106:554/ch1/main",
+"rtsp://admin:LUXHLR@192.168.0.103:554/ch1/main",
+"rtsp://admin:FWZLED@192.168.0.125:554/ch1/main"
+
+cd librdkafka
+git checkout tags/v2.2.0
+./configure --enable-ssl
+make
+sudo make install
+
+sudo mkdir -p /opt/nvidia/deepstream/deepstream/lib
+sudo cp /usr/local/lib/librdkafka* /opt/nvidia/deepstream/deepstream/lib
+sudo ldconfig
+
+sudo tar -xvf deepstream_sdk_v7.1.0_jetson.tbz2 -C /
+cd /opt/nvidia/deepstream/deepstream-7.1
+sudo ./install.sh
+sudo ldconfig
